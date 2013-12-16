@@ -24,7 +24,7 @@
 \ExecuteOptionsBeamer{thirdlogo=false}
 
 % Language
-\DeclareOptionBeamer{language}[italian]{\def\beamer@torinoth@language{#1}}
+\DeclareOptionBeamer{language}[portuges]{\def\beamer@torinoth@language{#1}}
 \DeclareOptionBeamer{language}[other]{\def\beamer@torinoth@language{#1}}
 \ExecuteOptionsBeamer{language=english}
 
@@ -127,7 +127,7 @@
 \def\beamer@torinoth@superv{}
 \def\beamer@torinoth@assistantsupervisorlabel{}
 \def\beamer@torinoth@cand{}
-\def\beamer@torinoth@italiantext{italian}%
+\def\beamer@torinoth@portugestext{portuges}%
 \def\beamer@torinoth@englishtext{english}%
 %----------------------------------
  % First Column labels
@@ -135,8 +135,8 @@
     \ifx\beamer@torinoth@secondsupervisor\beamer@torinoth@secondsuptext%
        % Supervisor-language-check
             
-	    \ifx\beamer@torinoth@language\beamer@torinoth@italiantext%
-		   \renewcommand\beamer@torinoth@superv{Relatori}%
+	    \ifx\beamer@torinoth@language\beamer@torinoth@portugestext%
+		   \renewcommand\beamer@torinoth@superv{Orientadores}%
 		 \else%
 		    \ifx\beamer@torinoth@language\beamer@torinoth@englishtext%
 		      \renewcommand\beamer@torinoth@superv{Supervisors}%
@@ -151,8 +151,8 @@
 	    \fi%  
     \else%
       % Supervisor-language-check
-	    \ifx\beamer@torinoth@language\beamer@torinoth@italiantext%
-		    \renewcommand\beamer@torinoth@superv{Relatore}%
+	    \ifx\beamer@torinoth@language\beamer@torinoth@portugestext%
+		    \renewcommand\beamer@torinoth@superv{Orientador}%
 		 \else%
 		    \ifx\beamer@torinoth@language\beamer@torinoth@englishtext%
 		      \renewcommand\beamer@torinoth@superv{Supervisor}%
@@ -169,8 +169,8 @@
     % Assistant Supervisor-number-check
     \ifx\beamer@torinoth@secondassistantsupervisor\beamer@torinoth@secondassistantsuptext%
 	    % Assistant-supervisor-language-check
-	    \ifx\beamer@torinoth@language\beamer@torinoth@italiantext%
-		   \renewcommand\beamer@torinoth@assistantsupervisorlabel{Correlatori}%
+	    \ifx\beamer@torinoth@language\beamer@torinoth@portugestext%
+		   \renewcommand\beamer@torinoth@assistantsupervisorlabel{Co-Orientadores}%
 		 \else%
 		    \ifx\beamer@torinoth@language\beamer@torinoth@englishtext%
 		      \renewcommand\beamer@torinoth@assistantsupervisorlabel{Assistant Supervisors}%
@@ -185,8 +185,8 @@
 	    \fi%
     \else%
 	    % Assistant-supervisor-language-check
-	    \ifx\beamer@torinoth@language\beamer@torinoth@italiantext%
-		   \renewcommand\beamer@torinoth@assistantsupervisorlabel{Correlatore}%
+	    \ifx\beamer@torinoth@language\beamer@torinoth@portugestext%
+		   \renewcommand\beamer@torinoth@assistantsupervisorlabel{Co-Orientador}%
 		 \else%
 		    \ifx\beamer@torinoth@language\beamer@torinoth@englishtext%
 		      \renewcommand\beamer@torinoth@assistantsupervisorlabel{Assistant Supervisor}%
@@ -206,8 +206,8 @@
     \def\beamer@torinoth@secondcandtext{true}%
     \ifx\beamer@torinoth@secondcandidate\beamer@torinoth@secondcandtext%
 	     % Candidate-language-check
-	    \ifx\beamer@torinoth@language\beamer@torinoth@italiantext%
-		   \renewcommand\beamer@torinoth@cand{Candidati}%
+	    \ifx\beamer@torinoth@language\beamer@torinoth@portugestext%
+		   \renewcommand\beamer@torinoth@cand{Candidatos}%
 		 \else%
 		    \ifx\beamer@torinoth@language\beamer@torinoth@englishtext%
 	         \renewcommand\beamer@torinoth@cand{Candidates}%
@@ -222,7 +222,7 @@
 	    \fi%   
     \else%
 	     % Candidate-language-check
-	    \ifx\beamer@torinoth@language\beamer@torinoth@italiantext%
+	    \ifx\beamer@torinoth@language\beamer@torinoth@portugestext%
 		    \renewcommand\beamer@torinoth@cand{Candidato}%
 		 \else  
 	       \ifx\beamer@torinoth@language\beamer@torinoth@englishtext%
@@ -244,7 +244,7 @@
 {
    % Logo & Ateneo
    \begin{centering}
-     \begin{beamercolorbox}[rounded=true,shadow=true,ht=2.5ex,wd=.89\paperwidth,sep=3pt,center,#1]{ateneo page header}%
+     \begin{beamercolorbox}[rounded=true,shadow=true,ht=5.0ex,wd=.89\paperwidth,sep=3pt,center,#1]{ateneo page header}%
        \usebeamerfont{ateneo}\insertateneo\par%
      \end{beamercolorbox}
      \vskip0.5em%
