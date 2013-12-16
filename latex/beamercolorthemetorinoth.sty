@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% Copyright 2011 by Fiandrino Claudio
+% Copyright 2011-2012 by Fiandrino Claudio
 %
 % This file may be distributed and/or modified
 %
@@ -21,6 +21,9 @@
 % Red
 \definecolor{redorange}{cmyk}{0,0.77,0.87,0}
 \definecolor{apricot}{cmyk}{0,0.32,0.52,0}
+%Brick
+\definecolor{brick}{cmyk}{0.2,0.9,1,0.2}
+\definecolor{lightbrick}{cmyk}{0.2,0.8,0.9,0.1}
 
 \DeclareOptionBeamer{color}{\def\beamer@torinoth@defcolor{#1}}
 \ExecuteOptionsBeamer{color=blue}
@@ -90,6 +93,29 @@
   \setbeamercolor{block title}{bg= redorange,fg=white}
   \setbeamercolor{block title alerted}{bg= redorange,fg=white}
   \setbeamercolor{block title example}{bg= redorange,fg=white}
+
+\fi%
+
+% Brick colors
+\def\beamer@torinoth@redtext{feup}%
+\ifx\beamer@torinoth@defcolor\beamer@torinoth@redtext%
+
+  \setbeamercolor*{palette primary}{fg=white,bg=brick}
+  \setbeamercolor*{palette secondary}{fg=black,bg=lightbrick}
+
+  \setbeamercolor*{titlelike}{fg=white,bg=brick}
+  \setbeamercolor*{frametitle}{fg=black,bg=black}
+  \setbeamercolor*{item}{fg=brick}
+  \setbeamercolor*{alerted text}{fg=brick}
+  \def\beamer@torinoth@color{brick}
+  
+   \setbeamercolor{block body}{fg=black,bg= lightbrick!20}
+  \setbeamercolor{block body alerted}{fg=black,bg= lightbrick!20}
+  \setbeamercolor{block body example}{use=block title,fg=black,bg= lightbrick!20}
+  \setbeamercolor{block title}{bg= brick,fg=white}
+  \setbeamercolor{block title alerted}{bg= brick,fg=white}
+  \setbeamercolor{block title example}{bg= brick,fg=white}
+
 
 \fi%
 
